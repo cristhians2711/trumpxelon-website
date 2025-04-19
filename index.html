@@ -16,58 +16,67 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: #0a0a0a;
+      background: #070012;
       color: #fff;
       scroll-behavior: smooth;
     }
     header {
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       padding: 2rem 1rem;
+      background: linear-gradient(135deg, #6e00ff, #f20089);
       animation: fadeIn 2s ease;
     }
     header img {
       max-width: 300px;
       border-radius: 1rem;
-      box-shadow: 0 0 30px #ff9900;
+      box-shadow: 0 0 30px #ffffff99;
+      margin-right: 2rem;
     }
-    h1 {
+    .header-content {
+      max-width: 500px;
+      text-align: left;
+    }
+    .header-content h1 {
       font-size: 3rem;
       margin: 1rem 0 0.5rem;
     }
-    p {
+    .header-content p {
       font-size: 1.1rem;
-      color: #ccc;
-      margin: 0 auto;
-      max-width: 700px;
+      color: #f9f9f9;
     }
     .buttons {
       margin-top: 2rem;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 1rem;
     }
     .buttons a {
-      background: #ff6a00;
-      color: #fff;
+      background: #00ffcc;
+      color: #000;
       text-decoration: none;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
     .buttons a:hover {
-      background: #ffa53f;
+      background: #00ffaa;
+      transform: scale(1.05);
     }
     section {
       max-width: 800px;
       margin: 4rem auto;
       padding: 1rem;
     }
-    .tokenomics, .news-section, .tweets-section {
-      background: #111;
+    .tokenomics, .news-section, .tweets-section, .holders-section, .roadmap-section {
+      background: #120033;
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 0 20px #ff990030;
+      box-shadow: 0 0 20px #ff00f030;
       animation: fadeInUp 1s ease;
     }
     .buy-section {
@@ -85,46 +94,59 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.85);
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
     }
     .popup-content {
-      background: #111;
+      background: #1f002e;
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
       max-width: 400px;
-      box-shadow: 0 0 20px #ff6a00;
+      box-shadow: 0 0 30px #ff00cc;
     }
     .popup-content h2 {
       margin-bottom: 1rem;
+      color: #fff;
     }
     .popup-content button {
-      background: #ff6a00;
+      background: #ff00cc;
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.2rem;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: 1rem;
+      font-size: 1rem;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #999;
     }
     .whitepaper-link, .liquidity-link, .twitter-link {
       text-align: center;
       margin-top: 1.5rem;
     }
     .whitepaper-link a, .liquidity-link a, .twitter-link a {
-      color: #ffa500;
+      color: #00ffcc;
       text-decoration: underline;
       font-size: 1rem;
+    }
+    .progress-container {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .progress-bar {
+      background: #ff00cc;
+      height: 20px;
+      width: 65%;
+      transition: width 1s ease-in-out;
     }
     @keyframes fadeIn {
       from { opacity: 0; }
@@ -147,58 +169,13 @@
 
   <header>
     <img src="logo.png" alt="TrumpXElon Logo">
-    <h1>TrumpXElon (TXE)</h1>
-    <p>When memes, power, and chaos collide. Join the meme-ocalypse fueled by Elon, Trump, and burning tokens.</p>
-    <div class="buttons">
-      <a href="#buy">Buy on PancakeSwap</a>
-      <a href="#tokenomics">Whitepaper</a>
-      <a href="https://t.me/TrumpXElonToken" target="_blank">Join Telegram</a>
+    <div class="header-content">
+      <h1>TrumpXElon (TXE)</h1>
+      <p>When memes, power, and chaos collide. Join the meme-ocalypse fueled by Elon, Trump, and burning tokens.</p>
+      <div class="buttons">
+        <a href="#buy">🚀 Buy on PancakeSwap</a>
+        <a href="#tokenomics">📄 Whitepaper</a>
+        <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity</a>
+      </div>
     </div>
   </header>
-
-  <section class="tokenomics" id="tokenomics">
-    <h2>🔥 Tokenomics</h2>
-    <ul>
-      <li>Total Supply: 1,000,000,000 TXE</li>
-      <li>2% Burn on Every Transaction</li>
-      <li>10% for Marketing & Community</li>
-      <li>10% for Development & Liquidity</li>
-    </ul>
-    <div class="whitepaper-link">
-      <a href="TrumpXElon_Whitepaper.pdf" target="_blank">📄 Download Full Whitepaper (PDF)</a>
-    </div>
-    <div class="liquidity-link">
-      <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity to TXE</a>
-    </div>
-    <div class="twitter-link">
-      <a href="https://twitter.com/trumpxelonTXE" target="_blank">🐦 Follow us on Twitter @trumpxelonTXE</a>
-    </div>
-  </section>
-
-  <section class="buy-section" id="buy">
-    <h2>🚀 Buy $TXE Now</h2>
-    <iframe src="https://pancakeswap.finance/swap?outputCurrency=0xYourTokenAddress"></iframe>
-  </section>
-
-  <section class="tweets-section">
-    <h2>📢 Latest Tweets</h2>
-    <a class="twitter-timeline" data-height="600" href="https://twitter.com/trumpxelonTXE?ref_src=twsrc%5Etfw">Tweets by @trumpxelonTXE</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </section>
-
-  <section class="news-section">
-    <h2>📰 Why Invest in TXE?</h2>
-    <ul>
-      <li>🚀 Strong community-driven growth</li>
-      <li>🔥 Deflationary mechanism: 2% burn on every transaction</li>
-      <li>💡 Inspired by cultural icons Trump & Elon — meme virality built in</li>
-      <li>📈 Early opportunity: low market cap, high upside potential</li>
-      <li>💬 Active on Twitter, Telegram, and building momentum daily</li>
-    </ul>
-  </section>
-
-  <footer>
-    © 2025 TrumpXElon $TXE. All rights reserved. Memes are not financial advice.
-  </footer>
-</body>
-</html>
