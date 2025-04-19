@@ -159,4 +159,74 @@
   <div class="liquidity-bar">
     <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity to TXE Now</a>
   </div>
+<section class="faq-section" style="max-width: 900px; margin: 4rem auto; background: #120033; padding: 2rem; border-radius: 1rem; box-shadow: 0 0 20px #ff00f030;">
+  <h2 style="text-align: center; margin-bottom: 2rem;">❓ Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="faq-item">
+      <button class="accordion-button">What is TrumpXElon (TXE)?</button>
+      <div class="panel"><p>TXE is a deflationary meme token on Binance Smart Chain, inspired by the cultural icons Donald Trump and Elon Musk. It combines humor, hype, and community-driven growth.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="accordion-button">How does the burn work?</button>
+      <div class="panel"><p>Every transaction burns 2% of the tokens involved. This reduces the total supply over time, increasing scarcity and value for holders.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="accordion-button">Where can I buy TXE?</button>
+      <div class="panel"><p>You can buy TXE directly on PancakeSwap by using our swap link provided above.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="accordion-button">How can I add liquidity?</button>
+      <div class="panel"><p>Head to the Add Liquidity section or click the sticky bar at the bottom of the site. You’ll earn fees from every TXE swap that happens on PancakeSwap.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="accordion-button">Is TXE safe?</button>
+      <div class="panel"><p>TXE is a community-launched project. There was no pre-sale, and the contract is publicly verified. Always DYOR before investing.</p></div>
+    </div>
+  </div>
+</section>
+<script>
+  const accButtons = document.querySelectorAll(".accordion-button");
+  accButtons.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+<style>
+  .accordion-button {
+    background-color: #1d0046;
+    color: #00ffcc;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  .accordion-button:hover {
+    background-color: #2d005a;
+  }
+  .panel {
+    padding: 0 1rem;
+    background-color: #1b003d;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 1rem;
+  }
+  .panel p {
+    margin: 1rem 0;
+  }
+</style>
 
