@@ -2,16 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrumpXElon Token (TXE)</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
   <style>
     body {
       margin: 0;
@@ -19,10 +12,12 @@
       background: #070012;
       color: #fff;
       scroll-behavior: smooth;
+      padding-bottom: 80px;
     }
     header {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 2rem 1rem;
@@ -30,28 +25,30 @@
       animation: fadeIn 2s ease;
     }
     header img {
-      max-width: 300px;
+      max-width: 250px;
       border-radius: 1rem;
       box-shadow: 0 0 30px #ffffff99;
-      margin-right: 2rem;
+      margin-bottom: 1rem;
     }
     .header-content {
       max-width: 500px;
-      text-align: left;
+      text-align: center;
     }
     .header-content h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 1rem 0 0.5rem;
     }
     .header-content p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #f9f9f9;
+      padding: 0 1rem;
     }
     .buttons {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      align-items: center;
     }
     .buttons a {
       background: #00ffcc;
@@ -62,26 +59,33 @@
       font-weight: bold;
       text-align: center;
       transition: background 0.3s ease, transform 0.2s ease;
+      width: 80%;
+      max-width: 300px;
     }
     .buttons a:hover {
       background: #00ffaa;
       transform: scale(1.05);
     }
-    section {
-      max-width: 800px;
-      margin: 4rem auto;
-      padding: 1rem;
-    }
-    .tokenomics, .news-section, .tweets-section, .holders-section, .roadmap-section {
-      background: #120033;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px #ff00f030;
-      animation: fadeInUp 1s ease;
-    }
-    .buy-section {
+    .liquidity-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ff00cc;
       text-align: center;
-      margin-top: 3rem;
+      padding: 1rem;
+      z-index: 1000;
+    }
+    .liquidity-bar a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    section {
+      max-width: 95%;
+      margin: 2rem auto;
+      padding: 1rem;
     }
     iframe {
       width: 100%;
@@ -105,12 +109,13 @@
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
-      max-width: 400px;
+      max-width: 90%;
       box-shadow: 0 0 30px #ff00cc;
     }
     .popup-content h2 {
       margin-bottom: 1rem;
       color: #fff;
+      font-size: 1.5rem;
     }
     .popup-content button {
       background: #ff00cc;
@@ -127,34 +132,9 @@
       font-size: 0.9rem;
       color: #999;
     }
-    .whitepaper-link, .liquidity-link, .twitter-link {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .whitepaper-link a, .liquidity-link a, .twitter-link a {
-      color: #00ffcc;
-      text-decoration: underline;
-      font-size: 1rem;
-    }
-    .progress-container {
-      background: #333;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 1rem;
-    }
-    .progress-bar {
-      background: #ff00cc;
-      height: 20px;
-      width: 65%;
-      transition: width 1s ease-in-out;
-    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -173,9 +153,13 @@
       <h1>TrumpXElon (TXE)</h1>
       <p>When memes, power, and chaos collide. Join the meme-ocalypse fueled by Elon, Trump, and burning tokens.</p>
       <div class="buttons">
-        <a href="#buy">🚀 Buy on PancakeSwap</a>
+        <a href="https://pancakeswap.finance/swap?outputCurrency=0x833860A0E25Efc338380996E3CB4C64df9987e49" target="_blank">🔁 Swap TXE</a>
         <a href="#tokenomics">📄 Whitepaper</a>
         <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity</a>
       </div>
     </div>
   </header>
+
+  <div class="liquidity-bar">
+    <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity to TXE Now</a>
+  </div>
