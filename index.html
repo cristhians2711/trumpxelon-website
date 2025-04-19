@@ -18,10 +18,12 @@
       font-family: 'Orbitron', sans-serif;
       background: #0a0a0a;
       color: #fff;
+      scroll-behavior: smooth;
     }
     header {
       text-align: center;
       padding: 2rem 1rem;
+      animation: fadeIn 2s ease;
     }
     header img {
       max-width: 300px;
@@ -61,11 +63,12 @@
       margin: 4rem auto;
       padding: 1rem;
     }
-    .tokenomics {
+    .tokenomics, .news-section, .tweets-section {
       background: #111;
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 20px #ff990030;
+      animation: fadeInUp 1s ease;
     }
     .buy-section {
       text-align: center;
@@ -114,15 +117,22 @@
       font-size: 0.9rem;
       color: #666;
     }
-    .whitepaper-link {
-      display: block;
+    .whitepaper-link, .liquidity-link, .twitter-link {
       text-align: center;
       margin-top: 1.5rem;
     }
-    .whitepaper-link a {
+    .whitepaper-link a, .liquidity-link a, .twitter-link a {
       color: #ffa500;
       text-decoration: underline;
       font-size: 1rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -157,6 +167,12 @@
     <div class="whitepaper-link">
       <a href="TrumpXElon_Whitepaper.pdf" target="_blank">📄 Download Full Whitepaper (PDF)</a>
     </div>
+    <div class="liquidity-link">
+      <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity to TXE</a>
+    </div>
+    <div class="twitter-link">
+      <a href="https://twitter.com/trumpxelonTXE" target="_blank">🐦 Follow us on Twitter @trumpxelonTXE</a>
+    </div>
   </section>
 
   <section class="buy-section" id="buy">
@@ -164,8 +180,25 @@
     <iframe src="https://pancakeswap.finance/swap?outputCurrency=0xYourTokenAddress"></iframe>
   </section>
 
+  <section class="tweets-section">
+    <h2>📢 Latest Tweets</h2>
+    <a class="twitter-timeline" data-height="600" href="https://twitter.com/trumpxelonTXE?ref_src=twsrc%5Etfw">Tweets by @trumpxelonTXE</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </section>
+
+  <section class="news-section">
+    <h2>📰 Why Invest in TXE?</h2>
+    <ul>
+      <li>🚀 Strong community-driven growth</li>
+      <li>🔥 Deflationary mechanism: 2% burn on every transaction</li>
+      <li>💡 Inspired by cultural icons Trump & Elon — meme virality built in</li>
+      <li>📈 Early opportunity: low market cap, high upside potential</li>
+      <li>💬 Active on Twitter, Telegram, and building momentum daily</li>
+    </ul>
+  </section>
+
   <footer>
-    © 2025 TrumpXElon. All rights reserved. Memes are not financial advice.
+    © 2025 TrumpXElon $TXE. All rights reserved. Memes are not financial advice.
   </footer>
 </body>
 </html>
