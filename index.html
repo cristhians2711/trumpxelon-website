@@ -14,22 +14,21 @@
       color: #fff;
     }
     header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
+      text-align: center;
+      padding: 2rem 1rem;
     }
     header img {
       max-width: 300px;
       border-radius: 1rem;
       box-shadow: 0 0 30px #00f7ff;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .action-buttons {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 1rem;
+      margin-bottom: 2rem;
     }
     .action-buttons a {
       background: #00f7ff;
@@ -70,12 +69,6 @@
       font-weight: bold;
       padding: 1rem;
       z-index: 9999;
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
     }
   </style>
 </head>
