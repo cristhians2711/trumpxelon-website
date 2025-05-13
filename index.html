@@ -1,118 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TrumpXElon Token (TXE)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meowlands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #222;
     }
     header {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 60px 20px 20px;
     }
     header img {
-      max-width: 300px;
-      border-radius: 1rem;
-      box-shadow: 0 0 30px #00f7ff;
-      margin-bottom: 2rem;
+      max-width: 200px;
     }
-    .action-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
+    header h1 {
+      font-size: 3rem;
+      margin: 20px 0 10px;
     }
-    .action-buttons a {
-      background: #00f7ff;
-      color: #000;
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      text-align: center;
+    header p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    .action-buttons a:hover {
-      background: #8c52ff;
-      color: white;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .intro-text {
-      text-align: center;
-      padding: 0 1rem;
-      max-width: 900px;
-      margin: 0 auto 2rem;
-      font-size: 1.2rem;
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
-    .fixed-bar {
-      position: fixed;
-      bottom: 0;
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .art-grid img {
       width: 100%;
-      background: #00f7ff;
-      color: #000;
+      border-radius: 12px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+    footer {
       text-align: center;
-      font-weight: bold;
-      padding: 1rem;
-      z-index: 9999;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="logo.png" alt="TrumpXElon Logo">
-    <div class="action-buttons">
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0x833860A0E25Efc338380996E3CB4C64df9987e49" target="_blank">🔁 Swap TXE</a>
-      <a href="TrumpXElon_Whitepaper.pdf" target="_blank">📄 Whitepaper</a>
-      <a href="https://tinyurl.com/2y4qmvqh" target="_blank">💧 Add Liquidity</a>
-    </div>
+    <img src="logo.png" alt="Meowlands logo">
+    <h1>MEOWLANDS</h1>
+    <p>Where abstract landscapes and feline souls collide. A surreal NFT universe born on Solana. 1,000 artworks. 20% for animal shelters. 100% vibes.</p>
   </header>
 
-  <div class="intro-text">
-    <p>🔥 TXE IS LIVE! Welcome to the TrumpXElon revolution. Start trading and join the meme-powered fire.</p>
-  </div>
-
-  <!-- NFT REWARDS SECTION -->
-  <section style="padding: 3rem; background: #111; color: #fff; text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 1rem;">🎁 TXE NFT REWARDS</h2>
-    <p style="max-width: 700px; margin: 0 auto 2rem;">
-      Add liquidity to TXE and get rewarded with exclusive collectible NFTs featuring Elon & Trump in a futuristic, cyberpunk style.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-      <div style="background: #1c1c1c; padding: 1rem; border-radius: 10px; max-width: 280px;">
-        <img src="TXE_RECRUIT.png" alt="TXE Recruit" style="width: 100%; border-radius: 10px;">
-        <h3 style="margin: 1rem 0 0.5rem;">💠 TXE Recruit</h3>
-        <p>For liquidity contributions from €0–100</p>
-      </div>
-      <div style="background: #1c1c1c; padding: 1rem; border-radius: 10px; max-width: 280px;">
-        <img src="TXE_GUARDIAN.png" alt="TXE Guardian" style="width: 100%; border-radius: 10px;">
-        <h3 style="margin: 1rem 0 0.5rem;">💠 TXE Guardian</h3>
-        <p>For liquidity contributions from €101–500</p>
-      </div>
-      <div style="background: #1c1c1c; padding: 1rem; border-radius: 10px; max-width: 280px;">
-        <img src="TXE_OVERLORD.png" alt="TXE Overlord" style="width: 100%; border-radius: 10px;">
-        <h3 style="margin: 1rem 0 0.5rem;">💠 TXE Overlord</h3>
-        <p>For liquidity contributions over €501</p>
-      </div>
+  <section>
+    <h2>Featured Art</h2>
+    <div class="art-grid">
+      <img src="art1.png" alt="Meowlands Art 1">
+      <img src="art2.png" alt="Meowlands Art 2">
+      <img src="art3.png" alt="Meowlands Art 3">
+      <img src="art4.png" alt="Meowlands Art 4">
+      <img src="art5.png" alt="Meowlands Art 5">
     </div>
-    <p style="margin-top: 2rem;">
-      📸 Paste your TXE/BNB liquidity transaction hash + your BSC address via our form:<br>
-      <a href="https://tinyurl.com/22effsab" target="_blank" style="color: #00f7ff; text-decoration: underline;">
-        Claim your NFT here
-      </a>
-    </p>
   </section>
 
-  <div class="fixed-bar">
-    💧 Add Liquidity to TXE → <a href="https://tinyurl.com/2y4qmvqh" style="color: #000; text-decoration: underline;">Click Here</a>
-  </div>
+  <section>
+    <h2>About the Project</h2>
+    <p>Meowlands is an NFT art project blending abstract dreamscapes and enigmatic cats into 1,000 unique tokens minted on Solana. Each piece invites holders into a world of introspection, visual poetry, and soft rebellion — while contributing 20% of profits to verified animal shelters.</p>
+  </section>
 
+  <section>
+    <h2>Utility & Impact</h2>
+    <ul>
+      <li>Early access to future drops</li>
+      <li>Monthly giveaways for holders</li>
+      <li>Commercial usage for select pieces</li>
+      <li>Voting power on which shelters to support</li>
+      <li>Private Discord area for Meowholders</li>
+      <li>20% of net earnings donated to animal shelters</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <strong>What blockchain is Meowlands on?</strong>
+      <p>Solana — fast, affordable, and eco-friendly.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How many NFTs will be minted?</strong>
+      <p>1,000 unique pieces, each one abstract and feline.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How much will each NFT cost?</strong>
+      <p>Final price to be announced. Whitelist gets discounts.</p>
+    </div>
+    <div class="faq-item">
+      <strong>What’s the real-world utility?</strong>
+      <p>Access to perks, airdrops, and impact voting.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Is this just art or part of a bigger plan?</strong>
+      <p>Both — a movement of art, compassion, and community.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How are donations handled?</strong>
+      <p>Transparent, community-voted, tracked publicly.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Follow us: <a href="https://x.com/WLFI_HODL">@WLFI_HODL</a> | Powered by trumpxelon.org</p>
+  </footer>
 </body>
 </html>
