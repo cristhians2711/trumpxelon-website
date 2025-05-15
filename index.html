@@ -4,133 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meowlands</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #fafafa;
-      color: #222;
+    body { font-family: 'Outfit', sans-serif; }
+    .wave-bg {
+      background: linear-gradient(145deg, #2c2c54, #3a0ca3, #7209b7, #f72585);
+      background-size: 600% 600%;
+      animation: gradientShift 20s ease infinite;
     }
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-    header img {
-      max-width: 200px;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 20px 0 10px;
-    }
-    header p {
-      font-size: 1.25rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .art-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .art-grid img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    .faq-item {
-      margin-bottom: 20px;
-    }
-    .faq-item strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
-<body>
-  <header>
-    <img src="logo.png" alt="Meowlands logo">
-    <h1>MEOWLANDS</h1>
-    <p>Where abstract landscapes and feline souls collide. A surreal NFT universe born on Solana. 1,000 artworks. 20% for animal shelters. 100% vibes.</p>
+<body class="text-white wave-bg min-h-screen flex flex-col items-center justify-center px-6 py-12">
+  <header class="text-center mb-12">
+    <img src="/logo.png" alt="Meowlands Logo" class="w-32 h-32 mx-auto mb-4 rounded-full shadow-lg">
+    <h1 class="text-4xl font-extrabold tracking-wide">Meowlands</h1>
+    <p class="text-lg mt-2">NFT Project · Abstract Art · Crypto-Philanthropy</p>
   </header>
 
-  <section>
-    <h2>Featured Art</h2>
-    <div class="art-grid">
-      <img src="art1.png" alt="Meowlands Art 1">
-      <img src="art2.png" alt="Meowlands Art 2">
-      <img src="art3.png" alt="Meowlands Art 3">
-      <img src="art4.png" alt="Meowlands Art 4">
-      <img src="art5.png" alt="Meowlands Art 5">
-    </div>
-  </section>
+  <main class="grid gap-8 max-w-5xl grid-cols-1 md:grid-cols-2">
+    <section class="bg-white/10 p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold text-yellow-300">Concept</h2>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Unique abstract art</li>
+        <li>20% of profits to animal shelters</li>
+        <li>Feline imagination & parallel worlds</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>About the Project</h2>
-    <p>Meowlands is an NFT art project blending abstract dreamscapes and enigmatic cats into 1,000 unique tokens minted on Solana. Each piece invites holders into a world of introspection, visual poetry, and soft rebellion — while contributing 20% of profits to verified animal shelters.</p>
-  </section>
+    <section class="bg-white/10 p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold text-purple-300">Solana</h2>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Mint on Solana</li>
+        <li>Audited smart contract</li>
+        <li>Utility: access, community & events</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Utility & Impact</h2>
-    <ul>
-      <li>Early access to future drops</li>
-      <li>Monthly giveaways for holders</li>
-      <li>Commercial usage for select pieces</li>
-      <li>Voting power on which shelters to support</li>
-      <li>Private Discord area for Meowholders</li>
-      <li>20% of net earnings donated to animal shelters</li>
-    </ul>
-  </section>
+    <section class="bg-white/10 p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold text-orange-300">Community</h2>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Exclusive Discord server</li>
+        <li>Whitelist for early holders</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <strong>What blockchain is Meowlands on?</strong>
-      <p>Solana — fast, affordable, and eco-friendly.</p>
-    </div>
-    <div class="faq-item">
-      <strong>How many NFTs will be minted?</strong>
-      <p>1,000 unique pieces, each one abstract and feline.</p>
-    </div>
-    <div class="faq-item">
-      <strong>How much will each NFT cost?</strong>
-      <p>Final price to be announced. Whitelist gets discounts.</p>
-    </div>
-    <div class="faq-item">
-      <strong>What’s the real-world utility?</strong>
-      <p>Access to perks, airdrops, and impact voting.</p>
-    </div>
-    <div class="faq-item">
-      <strong>Is this just art or part of a bigger plan?</strong>
-      <p>Both — a movement of art, compassion, and community.</p>
-    </div>
-    <div class="faq-item">
-      <strong>How are donations handled?</strong>
-      <p>Transparent, community-voted, tracked publicly.</p>
-    </div>
-  </section>
+    <section class="bg-white/10 p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold text-pink-300">Philosophy</h2>
+      <ul class="mt-2 list-disc list-inside">
+        <li>"Art with soul. Cats with a voice."</li>
+        <li>Transparent, community-first project</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>Follow us: <a href="https://x.com/WLFI_HODL">@WLFI_HODL</a> | Powered by trumpxelon.org</p>
+    <section class="bg-white/10 p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold text-blue-300">Roadmap</h2>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Phase 1: Art, community, whitelist</li>
+        <li>Phase 2: Mint & reveal</li>
+      </ul>
+    </section>
+
+    <section class="bg-white/10 p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold text-green-300">Website</h2>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Rebranding of trumpxelon.org</li>
+        <li>Minimalist & responsive from day 1</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-12 text-center">
+    <p class="text-md">Follow us: <a href="https://twitter.com/MeowlandsNFT" class="underline text-blue-200">@MeowlandsNFT</a></p>
+    <p class="text-md mt-1">Visit: <a href="https://trumpxelon.org" class="underline text-blue-200">www.trumpxelon.org</a></p>
   </footer>
 </body>
 </html>
